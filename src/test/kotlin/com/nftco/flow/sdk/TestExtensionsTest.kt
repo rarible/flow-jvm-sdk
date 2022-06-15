@@ -1,11 +1,13 @@
 package com.nftco.flow.sdk
 
 import com.nftco.flow.sdk.test.*
+import jdk.nashorn.internal.ir.annotations.Ignore
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
-@FlowEmulatorTest
+//@FlowEmulatorTest
+@Ignore
 class TestExtensionsTest {
 
     @FlowTestClient

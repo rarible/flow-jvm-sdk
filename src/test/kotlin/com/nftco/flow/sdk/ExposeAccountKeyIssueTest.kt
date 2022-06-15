@@ -6,10 +6,12 @@ import com.nftco.flow.sdk.test.FlowEmulatorTest
 import com.nftco.flow.sdk.test.FlowServiceAccountCredentials
 import com.nftco.flow.sdk.test.FlowTestClient
 import com.nftco.flow.sdk.test.TestAccount
+import jdk.nashorn.internal.ir.annotations.Ignore
 import org.junit.jupiter.api.Assertions.*
 import java.math.BigDecimal
 
-@FlowEmulatorTest
+//@FlowEmulatorTest
+@Ignore
 class ExposeAccountKeyIssueTest {
 
     @FlowTestClient
