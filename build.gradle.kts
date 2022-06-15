@@ -29,7 +29,7 @@ plugins {
     `java-test-fixtures`
     `maven-publish`
     id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
-    id("org.jmailen.kotlinter") version "3.4.0"
+//    id("org.jmailen.kotlinter") version "3.4.0"
 }
 
 repositories {
@@ -110,6 +110,7 @@ tasks {
         toolVersion = "0.8.7"
     }
 
+/*
     kotlinter {
         ignoreFailures = false
         indentSize = 4
@@ -124,6 +125,7 @@ tasks {
             "chain-wrapping"
         )
     }
+*/
 
 /*
     val documentationJar by creating(Jar::class) {
