@@ -7,6 +7,7 @@ import com.nftco.flow.sdk.test.FlowTestClient
 import jdk.nashorn.internal.ir.annotations.Ignore
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 
@@ -45,7 +46,7 @@ class TestClassConverterJson : JsonCadenceConverter<TestClass> {
 }
 
 //@FlowEmulatorProjectTest(flowJsonLocation = "flow/flow.json")
-@Ignore
+@Disabled
 class ScriptTest {
 
     @FlowTestClient

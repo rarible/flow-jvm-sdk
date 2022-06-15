@@ -1,9 +1,14 @@
 package com.nftco.flow.sdk
 
-import com.nftco.flow.sdk.test.*
-import jdk.nashorn.internal.ir.annotations.Ignore
+import com.nftco.flow.sdk.test.FlowServiceAccountCredentials
+import com.nftco.flow.sdk.test.FlowTestAccount
+import com.nftco.flow.sdk.test.FlowTestClient
+import com.nftco.flow.sdk.test.FlowTestContractDeployment
+import com.nftco.flow.sdk.test.TestAccount
+import com.nftco.flow.sdk.test.TestContractArg
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 //@FlowEmulatorProjectTest(
@@ -15,7 +20,7 @@ import org.junit.jupiter.api.Test
 //    serviceAccountHashAlgo = HashAlgorithm.SHA3_256,
 //    serviceAccountKeyIndex = 0
 //)
-@Ignore
+@Disabled
 class ProjectTestExtensionsTest {
 
     @FlowTestClient

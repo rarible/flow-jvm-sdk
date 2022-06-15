@@ -1,17 +1,16 @@
 package com.nftco.flow.sdk
 
 import com.nftco.flow.sdk.crypto.Crypto
-import com.nftco.flow.sdk.test.FlowEmulatorTest
 import com.nftco.flow.sdk.test.FlowServiceAccountCredentials
 import com.nftco.flow.sdk.test.FlowTestClient
 import com.nftco.flow.sdk.test.TestAccount
-import jdk.nashorn.internal.ir.annotations.Ignore
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import kotlin.random.Random
 
 //@FlowEmulatorTest
-@Ignore
+@Disabled
 class TransactionTest {
 
     @FlowTestClient
