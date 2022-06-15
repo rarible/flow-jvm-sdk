@@ -1,6 +1,6 @@
 // configuration variables
 
-val javaTargetVersion = "9"
+val javaTargetVersion = "1.8"
 val defaultGroupId = "com.nftco"
 val defaultVersion = "0.7.1-SNAPSHOT"
 
@@ -93,8 +93,8 @@ tasks {
     }
 
     java {
-        sourceCompatibility = JavaVersion.VERSION_1_9
-        targetCompatibility = JavaVersion.VERSION_1_9
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     jacocoTestReport {
