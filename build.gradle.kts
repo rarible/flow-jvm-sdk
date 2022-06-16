@@ -149,6 +149,12 @@ tasks {
     nexusPublishing {
         repositories {
             sonatype {
+
+                nexusUrl.set(uri("https://repo.rarible.org/repository/maven-public/"))
+                System.getenv("GRADLE_NEXUS_USER")?.let(username::set) ?: println("Not found `GRADLE_NEXUS_USER`")
+                System.getenv("GRADLE_NEXUS_PASS")?.let(password::set) ?: println("Not found `GRADLE_NEXUS_PASS`")
+
+/*
                 if (getProp("sonatype.nexusUrl") != null) {
                     nexusUrl.set(uri(getProp("sonatype.nexusUrl")!!))
                 }
@@ -161,6 +167,7 @@ tasks {
                 if (getProp("sonatype.password") != null) {
                     password.set(getProp("sonatype.password")!!)
                 }
+*/
             }
         }
     }
