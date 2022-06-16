@@ -1,11 +1,18 @@
 package com.nftco.flow.sdk
 
-import com.nftco.flow.sdk.test.*
+import com.nftco.flow.sdk.test.FlowServiceAccountCredentials
+import com.nftco.flow.sdk.test.FlowTestAccount
+import com.nftco.flow.sdk.test.FlowTestClient
+import com.nftco.flow.sdk.test.FlowTestContractDeployment
+import com.nftco.flow.sdk.test.TestAccount
+import com.nftco.flow.sdk.test.TestContractArg
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
-@FlowEmulatorTest
+//@FlowEmulatorTest
+@Disabled
 class TestExtensionsTest {
 
     @FlowTestClient
