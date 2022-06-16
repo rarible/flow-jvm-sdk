@@ -266,6 +266,7 @@ class JsonCadenceParser {
     fun float(field: Field<*>): Float = (field as NumberField).toFloat()!!
     fun double(field: Field<*>): Double = (field as NumberField).toDouble()!!
     fun bigDecimal(field: Field<*>): BigDecimal = (field as NumberField).toBigDecimal()!!
+    fun type(field: Field<*>): String = (field as TypeField).type
     fun <T> array(field: Field<*>, block: JsonCadenceParser.(field: ArrayField) -> T): T = block(field as ArrayField)
     fun <T> arrayValues(field: Field<*>, mapper: JsonCadenceParser.(field: Field<*>) -> T): List<T> = (field as ArrayField).value!!.map { mapper(it) }
     fun byteArray(field: Field<*>): ByteArray = arrayValues(field) { (it as UInt8NumberField).toByte()!! }.toByteArray()
@@ -299,6 +300,7 @@ class JsonCadenceParser {
     fun float(name: String): Float = float(field<NumberField>(name))
     fun double(name: String): Double = double(field<NumberField>(name))
     fun bigDecimal(name: String): BigDecimal = bigDecimal(field<NumberField>(name))
+    fun type(name: String): String = type(field<TypeField>(name))
     fun <T> array(name: String, block: JsonCadenceParser.(field: ArrayField) -> T): T = array(field(name), block)
     fun <T> arrayValues(name: String, mapper: JsonCadenceParser.(field: Field<*>) -> T): List<T> = arrayValues(field<ArrayField>(name), mapper)
     fun byteArray(name: String): ByteArray = byteArray(field(name))
