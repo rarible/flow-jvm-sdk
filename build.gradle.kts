@@ -28,7 +28,7 @@ plugins {
     `java-library`
     `java-test-fixtures`
     `maven-publish`
-    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
+//    id("io.github.gradle-nexus.publish-plugin") version "1.0.0"
 //    id("org.jmailen.kotlinter") version "3.4.0"
 }
 
@@ -146,13 +146,13 @@ tasks {
         add("archives", sourcesJar)
     }
 
-    nexusPublishing {
-        repositories {
-            sonatype {
-
-                nexusUrl.set(uri("https://repo.rarible.org/repository/maven-public/"))
-                System.getenv("GRADLE_NEXUS_USER")?.let(username::set) ?: println("Not found `GRADLE_NEXUS_USER`")
-                System.getenv("GRADLE_NEXUS_PASS")?.let(password::set) ?: println("Not found `GRADLE_NEXUS_PASS`")
+//    nexusPublishing {
+//        repositories {
+//            sonatype {
+//
+//                nexusUrl.set(uri("https://repo.rarible.org/repository/maven-public/"))
+//                System.getenv("GRADLE_NEXUS_USER")?.let(username::set) ?: println("Not found `GRADLE_NEXUS_USER`")
+//                System.getenv("GRADLE_NEXUS_PASS")?.let(password::set) ?: println("Not found `GRADLE_NEXUS_PASS`")
 
 /*
                 if (getProp("sonatype.nexusUrl") != null) {
@@ -168,9 +168,9 @@ tasks {
                     password.set(getProp("sonatype.password")!!)
                 }
 */
-            }
+/*            }
         }
-    }
+    }*/
 
     publishing {
         repositories {
