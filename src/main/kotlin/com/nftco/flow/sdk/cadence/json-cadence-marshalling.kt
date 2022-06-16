@@ -266,7 +266,7 @@ class JsonCadenceParser {
     fun float(field: Field<*>): Float = (field as NumberField).toFloat()!!
     fun double(field: Field<*>): Double = (field as NumberField).toDouble()!!
     fun bigDecimal(field: Field<*>): BigDecimal = (field as NumberField).toBigDecimal()!!
-    fun type(field: Field<*>): String = (field as TypeField).value?.staticType.typeID
+    fun type(field: Field<*>): String = (field as TypeField).value?.staticType?.typeID!!
     fun <T> array(field: Field<*>, block: JsonCadenceParser.(field: ArrayField) -> T): T = block(field as ArrayField)
     fun <T> arrayValues(field: Field<*>, mapper: JsonCadenceParser.(field: Field<*>) -> T): List<T> = (field as ArrayField).value!!.map { mapper(it) }
     fun byteArray(field: Field<*>): ByteArray = arrayValues(field) { (it as UInt8NumberField).toByte()!! }.toByteArray()

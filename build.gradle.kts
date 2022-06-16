@@ -2,7 +2,7 @@
 
 val javaTargetVersion = "1.8"
 val defaultGroupId = "com.nftco"
-val defaultVersion = "0.7.1.4"
+val defaultVersion = "0.7.1.5"
 
 // other variables
 
