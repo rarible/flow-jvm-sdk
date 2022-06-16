@@ -166,6 +166,15 @@ tasks {
     }
 
     publishing {
+        repositories {
+            maven {
+                val releaseUrl = uri("http://nexus-ext.rarible.int/repository/maven-releases/")
+                val snapshotUrl = uri("http://nexus-ext.rarible.int/repository/maven-snapshots/")
+                url = uri(if (version.toString().contains("SNAPSHOT")) snapshotUrl else releaseUrl)
+                isAllowInsecureProtocol = true
+            }
+            mavenLocal()
+        }
         publications {
             create<MavenPublication>("mavenJava") {
                 from(project.components["java"])
