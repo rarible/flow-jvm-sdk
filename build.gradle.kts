@@ -2,7 +2,7 @@
 
 val javaTargetVersion = "1.8"
 val defaultGroupId = "com.nftco"
-val defaultVersion = "0.7.1.1"
+val defaultVersion = "0.7.1.2"
 
 // other variables
 
@@ -21,7 +21,7 @@ version = when {
 
 plugins {
 //    id("org.jetbrains.dokka") version "1.6.10"
-    kotlin("jvm") version "1.7.0"
+    kotlin("jvm") version "1.5.31"
     idea
     jacoco
 //    signing
@@ -39,7 +39,7 @@ repositories {
 }
 
 dependencies {
-    api("org.jetbrains.kotlin:kotlin-reflect:1.7.0")
+    api("org.jetbrains.kotlin:kotlin-reflect:1.5.31")
 //    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.6.20")
 
     api("org.onflow:flow:0.21")
@@ -72,20 +72,20 @@ tasks {
     }
 
     compileKotlin {
-//        sourceCompatibility = javaTargetVersion
-//        targetCompatibility = javaTargetVersion
+        sourceCompatibility = javaTargetVersion
+        targetCompatibility = javaTargetVersion
 
         kotlinOptions {
             jvmTarget = javaTargetVersion
-            apiVersion = "1.7"
-            languageVersion = "1.7"
+            apiVersion = "1.5"
+            languageVersion = "1.5"
             freeCompilerArgs = listOf("-Xjsr305=strict", "-Xopt-in=kotlin.RequiresOptIn")
         }
     }
 
     compileTestKotlin {
-//        sourceCompatibility = javaTargetVersion
-//        targetCompatibility = javaTargetVersion
+        sourceCompatibility = javaTargetVersion
+        targetCompatibility = javaTargetVersion
 
         kotlinOptions {
             jvmTarget = javaTargetVersion
