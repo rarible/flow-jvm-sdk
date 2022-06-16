@@ -172,6 +172,8 @@ tasks {
                 val snapshotUrl = uri("http://nexus-ext.rarible.int/repository/maven-snapshots/")
                 url = uri(if (version.toString().contains("SNAPSHOT")) snapshotUrl else releaseUrl)
                 isAllowInsecureProtocol = true
+                credentials.username = System.getenv("GRADLE_NEXUS_USER")
+                credentials.password = System.getenv("GRADLE_NEXUS_PASS")
             }
             mavenLocal()
         }
