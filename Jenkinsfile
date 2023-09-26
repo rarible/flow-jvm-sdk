@@ -1,4 +1,4 @@
-@Library('shared-library@stable') _
+@Library('shared-library') _
 
 buildLibrary([
         "pkgRepoName": "nexus-ext",
