@@ -1,6 +1,6 @@
 @Library('shared-library') _
 
-buildLibrary([
+pipelinePackageRelease([
         "pkgRepoName": "nexus-ext",
         "slackChannel": "flow-build"
 ])
