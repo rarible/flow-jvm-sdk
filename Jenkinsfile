@@ -1,6 +1,6 @@
 @Library('shared-library@stable') _
 
 buildLibrary([
-        "credentialsId": "nexus-ext-ci",
+        "pkgRepoName": "nexus-ext",
         "slackChannel": "flow-build"
 ])
